@@ -1,0 +1,470 @@
+/*================================*/
+/* NAVBAR
+/*================================*/
+
+.smallMenuToggle {
+  display: none;
+}
+#smallMenu {
+  display: none;
+  width: 100%;
+  height: auto;
+  background-color: #F3F3F3;
+  text-align: center;
+}
+#smallMenu a:hover {
+  text-decoration: none;
+  /*color: #F8F9FA;*/
+  color: #000000;
+}
+.smallMenuItem {
+  border-top: 2px solid #F8F9FA;
+  width: 100%;
+  /*color: #F8F9FA;*/
+  color: #000000;
+  line-height: 60px;
+  font-size: 20px;
+}
+
+@media (max-width: 750px) {
+  .smallMenuToggle {
+    display: inline-block;
+    height: 40px;
+  }
+
+  .navbarItemRight,
+  .navbarItemLeft {
+    display: none;
+  }
+
+  .welcomeHeader {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navGreeting {
+    display: none;
+  }
+}
+
+
+/*================================*/
+/* PROFILE
+/*================================*/
+
+#profileContainer {
+  display: flex;
+  justify-content: center;
+  min-width: 300px;
+}
+
+#profileLeftPanel {
+  margin-bottom: 40px;
+  max-height: 650px;
+  max-width: 300px;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+#profilePic {
+  border-bottom: 1px solid #DFDFDF;
+  flex: 0 0 auto;
+  text-align: center;
+  width: 300px;
+}
+
+#profilePic img {
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.custom-file-input {
+  cursor: pointer;
+}
+
+.custom-file-control::after {
+  content: "Choose file...";
+}
+
+.custom-file-control::before {
+  content: "Browse";
+}
+
+.form-control-file.selected::after {
+  content: "" !important;
+}
+
+#profileInfo {
+  flex-direction: column;
+  width: 300px;
+}
+
+#profileName {
+  padding: 20px;
+  padding-bottom: 0;
+  flex: 0 0 26px;
+}
+
+#profileAbout {
+  text-align: justify;
+  flex: 0 1 auto;
+}
+
+#profileAboutText {
+  overflow-y: auto;
+  max-height: 200px;
+  min-height: 50px;
+  padding: 10px 20px;
+  flex: 0 1 auto;
+}
+
+#profileEmail {
+  border-top: 1px solid #DFDFDF;
+  border-bottom: 1px solid #DFDFDF;
+  padding: 10px 20px;
+  flex: 0 0 24px;
+}
+
+#profileDelete {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #C82333;
+  flex: 0 0 24px;
+}
+
+#profileDelete a {
+  color: #C82333;
+}
+
+.edit-wrapper:hover .edit-fade {
+  opacity: 0.3;
+}
+.edit-wrapper:hover .edit-icon {
+  opacity: 1;
+}
+.edit-wrapper:hover {
+  cursor: pointer;
+}
+.edit-wrapper {
+  position: relative;
+  max-width: 300px;
+}
+.edit-fade {
+  transition: .5s ease;
+  opacity: 1;
+}
+.edit-icon {
+  font-size: 30px;
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+#aboutUpdade {
+  resize: none;
+  width: 100%;
+}
+
+/*-----------------------------------*/
+
+#profileRightPanel {
+  max-width: 800px;
+  min-width: 320px;
+  width: 800px;
+  max-height: 650px;
+  margin-bottom: 40px;
+}
+
+#profileRightPanel nav {
+  border: none;
+}
+
+#publishedShares,
+#likedShares {
+  height: 550px;
+  overflow: auto;
+}
+
+/*-----------------------------------*/
+
+@media (max-width: 900px) {
+  #profileContainer {
+    flex-direction: column;
+  }
+
+  #profileLeftPanel,
+  #profileRightPanel {
+    align-self: center;
+  }
+
+  #profileLeftPanel {
+    margin-right: 0;
+  }
+  #profilePic {
+    width: 300px;
+  }
+  #profileInfo {
+    width: 300px;
+  }
+
+  #profileRightPanel {
+    min-width: 300px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 900px) {
+  #profileLeftPanel {
+    align-items: center;
+    max-width: 900px;
+    min-width: 600px;
+    width: 80%;
+  }
+  #profileLeftPanel .card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: none;
+  }
+  #profilePic {
+    border: 1px solid #DFDFDF;
+    border-radius: .25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #profileInfo {
+    margin-left: 30px;
+  }
+}
+
+/*================================*/
+/* SHARES
+/*================================*/
+
+#addShare {
+  max-width: 900px;
+  min-width: 300px;
+  width: 90%;
+}
+
+#sharesIndexContainer,
+#sharesOneContainer {
+  max-width: 900px;
+  min-width: 300px;
+}
+
+.shareDate {
+  color: #B5B5B5;
+}
+
+.share-footer .icon-heart,
+.share-footer .icon-comment,
+.share-footer .like-count,
+.share-footer .comment-count {
+  color: #D5D5D5;
+}
+
+.share-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.shareFooterLeft .likesCounter {
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-left: 1px solid #E5E5E5;
+  border-right: 1px solid #E5E5E5;
+  min-width: 50px;
+  text-align: center;
+}
+.shareFooterLeft .commentsCounter {
+  margin-left: 30px;
+  padding-left: 20px;
+  border-left: 1px solid #E5E5E5;
+  min-width: 50px;
+  text-align: center;
+}
+
+.shareFooterRight {
+  display: flex;
+  flex-direction: row;
+}
+
+.smallShareFooter {
+  display: none;
+}
+
+.share-footer .profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /*background-image: url('/shareboard/assets/img/profile_pictures/default');*/
+}
+
+.shareAuthor {
+  color: #BAB5B5;
+}
+
+@media (max-width: 650px) {
+  .smallShareFooter {
+    display: block;
+    margin-top: 25px;
+  }
+
+  .bigLikeBtn,
+  .bigCommentsBtn {
+    display: none;
+  }
+
+  .shareFooterLeft .likesCounter {
+    border-left: none;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 30px;
+    margin-right: 20px;
+  }
+  .shareFooterLeft .commentsCounter {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+  .shareFooterLeft .likeBtn {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  .smallShareFooter {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .smallLikeBtn {
+    margin-bottom: 20px;
+  }
+
+  .shareFooterRight {
+    display: block;
+    text-align: right;
+  }
+}
+
+.commentBox {
+  margin-top: 10px;
+}
+
+#commentPostBox,
+#commentList {
+  max-width: 700px;
+}
+
+#commentList {
+  margin-left: -10px;
+}
+
+.comment-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.comment .icon-cancel-1 {
+  font-size: 120%;
+  color: #B5B5B5;
+  width: 26px;
+  height: 26px;
+}
+
+.comment .icon-cancel-1:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.comment-wrapper {
+  min-width: 230px;
+  /*width: 100%;*/
+  background-color: #F7F7F7;
+  padding: 10px;
+  padding-right: 0;
+  margin-right: 0 !important;
+}
+
+.comment-wrapper p {
+  font-size: 15px;
+  color: #B5B5B5;
+}
+.comment-wrapper .comment-text {
+  color: black;
+}
+.comment-wrapper .comment-profile-link {
+  color: #B5B5B5;
+  text-decoration: none;
+}
+
+#sharesOneContainer .commentsCounter {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+/*================================*/
+/*
+/*================================*/
+
+.bigBtn {
+  min-width: 180px;
+}
+
+#regCheckbox:focus {
+    box-shadow: 0 0 0 2pt #7FBDFF;
+}
+
+/*================================*/
+/* TESTING ACCOUNT INFO
+/*================================*/
+
+#testInfo {
+  text-align: left;
+  margin-top: 30px;
+  color: #B5B5B5;
+}
+#testInfo p {
+  margin: 0px;
+}
+#testCredentials {
+  margin-top: 15px;
+  text-align: center;
+}
+#testLogin, #testPass {
+  font-size: 25px;
+}
+
+/*================================*/
+/* FOOTER
+/*================================*/
+
+#footer {
+  text-align: center;
+  margin: 20px;
+  /* position: absolute; */
+  /* bottom: 0; */
+  width: 100%;
+  /* margin-left: 0; */
+}
+#footer hr {
+  width: 100%;
+}
