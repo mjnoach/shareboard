@@ -17,5 +17,5 @@ define("DB_PASS", "");
 // ========================================
 //  SERVER
 // ========================================
-define("ROOT_URL", "http://".$_SERVER['SERVER_NAME']);
+define("ROOT_URL", "https://".$_SERVER['SERVER_NAME']);
 define("SERVER_TLD", substr(strrchr($_SERVER['SERVER_NAME'], '.'), 1));
